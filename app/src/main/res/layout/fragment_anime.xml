@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnimeFragment">
+
+    <ImageView
+        android:id="@+id/sao_header"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:src="@drawable/sao_header"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="Romance - Comedia"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sao_header" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/toradora"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="8dp"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/toradora"
+                app:layout_constraintBottom_toTopOf="@+id/toradora_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/toradora_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:text="Toradora!"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toradora"
+                app:layout_constraintVertical_bias="0.483" />
+
+            <ImageButton
+                android:id="@+id/kaguya"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="8dp"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/kaguya"
+                app:layout_constraintBottom_toTopOf="@+id/kaguya_title"
+                app:layout_constraintStart_toEndOf="@+id/toradora"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/kaguya_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kaguya-sama"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kaguya"
+                app:layout_constraintVertical_bias="0.483"
+                tools:layout_editor_absoluteX="124dp" />
+
+            <ImageButton
+                android:id="@+id/bunny_girl"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="8dp"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bunny_girl"
+                app:layout_constraintBottom_toTopOf="@+id/bunny_girl_title"
+                app:layout_constraintStart_toEndOf="@id/kaguya"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/bunny_girl_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bunny-Girl"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bunny_girl"
+                app:layout_constraintVertical_bias="0.483"
+                tools:layout_editor_absoluteX="242dp" />
+
+            <ImageButton
+                android:id="@+id/nisekoi"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="8dp"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/nisekoi"
+                app:layout_constraintBottom_toTopOf="@id/nisekoi_title"
+                app:layout_constraintStart_toEndOf="@id/bunny_girl"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nisekoi_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nisekoi"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nisekoi"
+                tools:layout_editor_absoluteX="360dp" />
+
+            <ImageButton
+                android:id="@+id/horimiya"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="8dp"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/horimiya"
+                app:layout_constraintBottom_toTopOf="@id/horimiya_title"
+                app:layout_constraintStart_toEndOf="@id/nisekoi"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/horimiya_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Horimiya"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horimiya"
+                app:layout_constraintVertical_bias="0.645"
+                tools:layout_editor_absoluteX="455dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </HorizontalScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
