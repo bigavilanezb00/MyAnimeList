@@ -9,7 +9,23 @@
         android:id="@+id/animeFragment"
         android:name="com.example.myanimelist.AnimeFragment"
         android:label="fragment_anime"
-        tools:layout="@layout/fragment_anime" />
+        tools:layout="@layout/fragment_anime" >
+        <action
+            android:id="@+id/action_animeFragment_to_kaguyaFragment"
+            app:destination="@id/kaguyaFragment" />
+        <action
+            android:id="@+id/action_animeFragment_to_horimiyaFragment"
+            app:destination="@id/horimiyaFragment" />
+        <action
+            android:id="@+id/action_animeFragment_to_toradoraFragment"
+            app:destination="@id/toradoraFragment" />
+        <action
+            android:id="@+id/action_animeFragment_to_bunnyGirlFragment"
+            app:destination="@id/bunnyGirlFragment" />
+        <action
+            android:id="@+id/action_animeFragment_to_nisekoiFragment"
+            app:destination="@id/nisekoiFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mostrarAnimeFragment"
         android:name="com.example.myanimelist.MostrarAnimeFragment"
@@ -24,12 +40,56 @@
         android:id="@+id/recyclerAnimeFragment"
         android:name="com.example.myanimelist.RecyclerAnimeFragment"
         android:label="fragment_recycler_anime"
-        tools:layout="@layout/fragment_recycler_anime" >
+        tools:layout="@layout/fragment_recycler_anime" />
+    <action
+        android:id="@+id/action_global_nuevoAnimeFragment"
+        app:destination="@id/nuevoAnimeFragment" />
+    <action
+        android:id="@+id/action_global_mostrarAnimeFragment"
+        app:destination="@id/mostrarAnimeFragment" />
+    <fragment
+        android:id="@+id/toradoraFragment"
+        android:name="com.example.myanimelist.ToradoraFragment"
+        android:label="fragment_toradora"
+        tools:layout="@layout/fragment_toradora" >
         <action
-            android:id="@+id/action_recyclerAnimeFragment_to_mostrarAnimeFragment"
-            app:destination="@id/mostrarAnimeFragment" />
+            android:id="@+id/action_toradoraFragment_to_animeFragment"
+            app:destination="@id/animeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/horimiyaFragment"
+        android:name="com.example.myanimelist.HorimiyaFragment"
+        android:label="fragment_horimiya"
+        tools:layout="@layout/fragment_horimiya" >
         <action
-            android:id="@+id/action_recyclerAnimeFragment_to_nuevoAnimeFragment"
-            app:destination="@id/nuevoAnimeFragment" />
+            android:id="@+id/action_horimiyaFragment_to_animeFragment"
+            app:destination="@id/animeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kaguyaFragment"
+        android:name="com.example.myanimelist.KaguyaFragment"
+        android:label="fragment_kaguya"
+        tools:layout="@layout/fragment_kaguya" >
+        <action
+            android:id="@+id/action_kaguyaFragment_to_animeFragment"
+            app:destination="@id/animeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bunnyGirlFragment"
+        android:name="com.example.myanimelist.BunnyGirlFragment"
+        android:label="fragment_bunny_girl"
+        tools:layout="@layout/fragment_bunny_girl" >
+        <action
+            android:id="@+id/action_bunnyGirlFragment_to_animeFragment"
+            app:destination="@id/animeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nisekoiFragment"
+        android:name="com.example.myanimelist.NisekoiFragment"
+        android:label="fragment_nisekoi"
+        tools:layout="@layout/fragment_nisekoi" >
+        <action
+            android:id="@+id/action_nisekoiFragment_to_animeFragment"
+            app:destination="@id/animeFragment" />
     </fragment>
 </navigation>

@@ -13,6 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.myanimelist.databinding.FragmentMostrarAnimeBinding;
+import com.example.myanimelist.databinding.FragmentRecyclerAnimeBinding;
 
 
 public class MostrarAnimeFragment extends Fragment {
@@ -22,8 +23,7 @@ public class MostrarAnimeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mostrar_anime, container, false);
+        return (binding = FragmentMostrarAnimeBinding.inflate(inflater, container, false)).getRoot();
     }
 
     @Override

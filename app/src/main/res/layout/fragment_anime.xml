@@ -10,6 +10,7 @@
         android:id="@+id/sao_header"
         android:layout_width="match_parent"
         android:layout_height="230dp"
+        android:scaleType="fitXY"
         android:src="@drawable/sao_header"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,6 +35,7 @@
         android:layout_marginStart="1dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="1dp"
+        android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,11 +63,11 @@
                 android:id="@+id/toradora_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
                 android:text="Toradora!"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/kaguya_title"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/toradora"
                 app:layout_constraintVertical_bias="0.483" />
@@ -89,9 +91,10 @@
                 android:text="Kaguya-sama"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/bunny_girl_title"
+                app:layout_constraintStart_toEndOf="@+id/toradora_title"
                 app:layout_constraintTop_toBottomOf="@+id/kaguya"
-                app:layout_constraintVertical_bias="0.483"
-                tools:layout_editor_absoluteX="124dp" />
+                app:layout_constraintVertical_bias="0.483" />
 
             <ImageButton
                 android:id="@+id/bunny_girl"
@@ -112,9 +115,10 @@
                 android:text="Bunny-Girl"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/nisekoi_title"
+                app:layout_constraintStart_toEndOf="@+id/kaguya_title"
                 app:layout_constraintTop_toBottomOf="@id/bunny_girl"
-                app:layout_constraintVertical_bias="0.483"
-                tools:layout_editor_absoluteX="242dp" />
+                app:layout_constraintVertical_bias="0.483" />
 
             <ImageButton
                 android:id="@+id/nisekoi"
@@ -135,8 +139,9 @@
                 android:text="Nisekoi"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/nisekoi"
-                tools:layout_editor_absoluteX="360dp" />
+                app:layout_constraintEnd_toStartOf="@+id/horimiya_title"
+                app:layout_constraintStart_toEndOf="@+id/bunny_girl_title"
+                app:layout_constraintTop_toBottomOf="@id/nisekoi" />
 
             <ImageButton
                 android:id="@+id/horimiya"
@@ -157,9 +162,10 @@
                 android:text="Horimiya"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/nisekoi_title"
                 app:layout_constraintTop_toBottomOf="@+id/horimiya"
-                app:layout_constraintVertical_bias="0.645"
-                tools:layout_editor_absoluteX="455dp" />
+                app:layout_constraintVertical_bias="0.645" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

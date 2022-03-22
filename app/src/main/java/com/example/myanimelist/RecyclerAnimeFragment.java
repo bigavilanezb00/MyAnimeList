@@ -25,9 +25,8 @@ import java.util.List;
 
 public class RecyclerAnimeFragment extends Fragment {
 
-
     private FragmentRecyclerAnimeBinding binding;
-    private AnimesViewModel animesViewModel;
+    AnimesViewModel animesViewModel;
     private NavController navController;
 
     @Override
@@ -42,15 +41,16 @@ public class RecyclerAnimeFragment extends Fragment {
         animesViewModel = new ViewModelProvider(requireActivity()).get(AnimesViewModel.class);
         navController = Navigation.findNavController(view);
 
-        binding.irANuevoAnime.setOnClickListener(new View.OnClickListener() {
+        binding.addAnime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navController.navigate(R.id.action_recyclerAnimeFragment_to_nuevoAnimeFragment);
+                navController.navigate(R.id.action_global_nuevoAnimeFragment);
             }
         });
 
 
-        AnimesAdapter animesAdapter = new AnimesAdapter();
+        AnimesAdapter animesAdapter;
+        animesAdapter = new AnimesAdapter();
 
         binding.recyclerView.setAdapter(animesAdapter);
 
@@ -116,7 +116,7 @@ public class RecyclerAnimeFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     animesViewModel.seleccionar(anime);
-                    navController.navigate(R.id.action_recyclerAnimeFragment_to_mostrarAnimeFragment);
+                    navController.navigate(R.id.action_global_mostrarAnimeFragment);
                 }
             });
         }
